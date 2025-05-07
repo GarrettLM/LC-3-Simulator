@@ -9,10 +9,12 @@ MemoryManagementUnit::~MemoryManagementUnit() {
   delete [] m_memoryArray;
 }
 
-void MemoryManagementUnit::setValue(uint16_t memoryAddress, uint16_t value) {}
+void MemoryManagementUnit::setValue(uint16_t memoryAddress, uint16_t value) {
+  m_memoryArray[memoryAddress] = value;
+}
 
 uint16_t MemoryManagementUnit::getValue(uint16_t memoryAddress) {
-  return 0;
+  return m_memoryArray[memoryAddress];
 }
 
 size_t MemoryManagementUnit::getSize() {
