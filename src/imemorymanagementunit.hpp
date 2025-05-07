@@ -6,4 +6,5 @@ class IMemoryManagementUnit {
     virtual ~IMemoryManagementUnit() = default;
     virtual void setValue(uint16_t memoryAddress, uint16_t value) = 0;
     virtual uint16_t getValue(uint16_t memoryAddress) = 0;
+    virtual size_t getSize() = 0;
 };
